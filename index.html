@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>곰댕이 Gomdaeng</title>
 <meta name="description" content="부르면 세발자전거 타고 달려가는 꼬마 영웅, 곰댕이 공식 사이트. 캐릭터 소개, 프로필, 이미지와 협업 안내.">
+<meta name="theme-color" content="#F6F8FB">
 <meta property="og:type" content="website">
 <meta property="og:title" content="곰댕이 Gomdaeng">
 <meta property="og:description" content="힘든 날 제일 먼저 달려와 곁에 있어 주는 애착친구">
@@ -12,217 +13,286 @@
 <meta property="og:url" content="https://jhj0405-tech.github.io/gomdaeng/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.png">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
 <style>
-/* Layout: graph-paper desk (the studio backdrop in Gomdaeng's renders), one centered column, cape-red used only for calls to action and the hero badge */
+/* Brand site, single light look on purpose: graph-paper desk from the renders, sky-blue shirt as the main hue, cape-red only for actions */
 :root{
-  --paper:#F6F8FB; --grid:rgba(120,150,190,.14); --card:#FFFFFF; --ink:#2E2A27; --soft:#6B625B;
-  --sky:#9CC3EA; --sky-deep:#3F78B5; --cape:#D8483A; --cheek:#F3B3AE; --hair:#8A6B4E; --line:#E3E8EF;
-  --display:"Jua","Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  --body:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  color-scheme:light;
+  --paper:#F6F8FB; --grid:rgba(110,145,190,.12); --card:#FFFFFF; --ink:#2B2724; --soft:#665E57;
+  --sky:#A9CDF0; --sky-deep:#2F6CAD; --cape:#D8483A; --cape-dark:#B93A2E; --hair:#8A6B4E; --line:#E2E7EE;
+  --display:"Jua","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --gap:clamp(56px,9vw,96px);
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#141A24; --grid:rgba(156,195,234,.07); --card:#1C2431; --ink:#EEF2F7; --soft:#A9B3C2;
-  --sky:#7FA9D6; --sky-deep:#9CC3EA; --cape:#EE6A5C; --cheek:#E9A19B; --hair:#C9A988; --line:#2A3443; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#141A24; --grid:rgba(156,195,234,.07); --card:#1C2431; --ink:#EEF2F7; --soft:#A9B3C2;
-  --sky:#7FA9D6; --sky-deep:#9CC3EA; --cape:#EE6A5C; --cheek:#E9A19B; --hair:#C9A988; --line:#2A3443; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;
+  word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;
   background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:28px 28px;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.wrap{max-width:960px;margin:0 auto;padding-block:40px 64px;display:flex;flex-direction:column;gap:72px}
-h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.25}
-h2{font-size:clamp(26px,4vw,34px)}
-h3{font-size:21px}
+  background-size:28px 28px;padding-bottom:env(safe-area-inset-bottom,0px)}
+.in{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.3;letter-spacing:-.01em}
+h2{font-size:clamp(26px,4.2vw,36px)}
+h3{font-size:22px}
 p{margin:0}
-.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--sky-deep);font-weight:700}
-.muted{color:var(--soft)}
-section{display:flex;flex-direction:column;gap:20px}
-.prose{max-width:62ch;display:flex;flex-direction:column;gap:12px}
 img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.eyebrow{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.16em;color:var(--sky-deep)}
+.lead{font-size:17px;color:var(--soft);max-width:34em}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(246,248,251,.86);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .in{display:flex;align-items:center;gap:16px;height:60px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--display);font-size:22px}
+.logo img{width:32px;height:32px;border-radius:50%;object-fit:cover;background:var(--card)}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{text-decoration:none;font-size:15px;font-weight:500;padding:6px 10px;border-radius:8px;color:var(--soft)}
+.menu a:hover{color:var(--ink);background:var(--card)}
+.nav .cta{margin-left:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-family:var(--display);font-size:17px;padding:11px 20px;border-radius:999px;border:2px solid var(--ink);color:var(--ink);background:var(--card);transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--cape);border-color:var(--cape);color:#fff}
+.btn.primary:hover{background:var(--cape-dark);border-color:var(--cape-dark)}
+.btn.sm{font-size:15px;padding:7px 14px}
+.btn:focus-visible,.menu a:focus-visible,.logo:focus-visible{outline:3px solid var(--sky-deep);outline-offset:3px}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+.hero{padding-block:clamp(32px,6vw,72px) 0}
+.hero .in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,56px);align-items:center}
 .hero-text{display:flex;flex-direction:column;gap:18px;min-width:0}
-.hero h1{font-size:clamp(52px,9vw,88px);color:var(--ink)}
-.hero h1 small{display:block;font-size:.34em;color:var(--hair);letter-spacing:.06em;margin-top:4px}
-.tag{font-family:var(--display);font-size:clamp(20px,2.6vw,24px);color:var(--sky-deep)}
-.badge{align-self:flex-start;font-family:var(--display);background:var(--cape);color:#fff;padding:6px 14px;border-radius:999px;font-size:16px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:4px 12px;font-size:14px}
-.hero-img{border-radius:28px;overflow:hidden;background:var(--card);box-shadow:0 18px 40px -24px rgba(40,70,110,.45)}
+.badge{align-self:flex-start;font-family:var(--display);background:var(--card);color:var(--cape);border:2px solid var(--cape);padding:4px 14px;border-radius:999px;font-size:15px}
+.hero h1{font-size:clamp(56px,10vw,96px);line-height:1.05}
+.hero h1 span{display:block;font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:.32em;color:var(--hair);margin-top:10px}
+.tagline{font-family:var(--display);font-size:clamp(21px,2.8vw,26px);line-height:1.45;color:var(--sky-deep)}
+.hero .lead{font-size:16px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.hero-img{border-radius:32px;overflow:hidden;background:var(--sky);box-shadow:0 24px 48px -28px rgba(40,70,110,.5);aspect-ratio:1/1}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.facts{margin-top:clamp(28px,5vw,48px)}
+.facts .in{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;padding:0}
+.fact{background:var(--card);padding:16px 18px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fact dt{font-size:12px;letter-spacing:.08em;color:var(--soft)}
+.fact dd{margin:0;font-family:var(--display);font-size:18px;line-height:1.4}
+.facts-wrap{max-width:1040px;margin:clamp(28px,5vw,48px) auto 0;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 
-/* profile */
-.profile{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.pf{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.pf dt{font-size:13px;color:var(--soft);letter-spacing:.06em}
-.pf dd{margin:0;font-family:var(--display);font-size:19px;line-height:1.4}
+main{display:flex;flex-direction:column;gap:var(--gap);padding-block:var(--gap)}
+
+/* story */
+.story .in{display:grid;grid-template-columns:5fr 6fr;gap:clamp(24px,5vw,56px);align-items:center}
+.story-img{border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story-text{display:flex;flex-direction:column;gap:16px;min-width:0}
+.story-text p{max-width:30em}
+.quote{font-family:var(--display);font-size:clamp(22px,3vw,28px);line-height:1.45;color:var(--ink);padding-left:16px;border-left:4px solid var(--sky)}
 
 /* lines */
-.lines{display:flex;flex-wrap:wrap;gap:12px}
-.bubble{position:relative;background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:10px 18px;font-family:var(--display);font-size:20px}
-.bubble::after{content:"";position:absolute;left:22px;bottom:-9px;width:14px;height:14px;background:var(--card);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
-.bubble.main{background:var(--sky);color:#1F2A36;border-color:var(--sky)}
-.bubble.main::after{background:var(--sky);border-color:var(--sky)}
+.lines{display:flex;flex-wrap:wrap;gap:14px 12px}
+.bubble{position:relative;background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:9px 18px;font-family:var(--display);font-size:19px;line-height:1.4}
+.bubble::after{content:"";position:absolute;left:22px;bottom:-8px;width:13px;height:13px;background:inherit;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
+.bubble.main{background:var(--sky);border-color:var(--sky)}
+.bubble.main::after{border-color:var(--sky)}
 
-/* gallery */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.gallery figure{margin:0;background:var(--card);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+/* look */
+.turn{margin:0 0 14px;background:var(--card);border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.turn img{width:100%}
+.turn figcaption,.gallery figcaption{font-size:13px;color:var(--soft);padding:10px 14px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery figure{margin:0;background:var(--card);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line)}
 .gallery img{aspect-ratio:1/1;object-fit:cover;width:100%}
-.gallery figcaption{font-size:14px;color:var(--soft);padding:8px 12px}
-.wide{grid-column:span 2}
-.wide img{aspect-ratio:2/1}
-.turn{background:var(--card);border-radius:22px;overflow:hidden;border:1.5px solid var(--line)}
-.turn figcaption{padding:10px 16px;font-size:14px;color:var(--soft)}
+.gallery .wide{grid-column:span 2}
+.gallery .wide img{aspect-ratio:2/1}
 
-/* audience + collab */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.panel{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.panel ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+/* collab */
+.two .in{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
 .fields{display:flex;flex-wrap:wrap;gap:8px}
-.fields span{background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:4px 10px;font-size:15px}
+.fields span{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:4px 12px;font-size:14px;font-weight:500}
 
 /* rights */
-.rights{background:var(--card);border-radius:22px;padding:24px;border:1.5px dashed var(--sky-deep);display:flex;flex-direction:column;gap:12px}
-.rights dl{margin:0;display:grid;grid-template-columns:7em 1fr;gap:8px 16px}
-.rights dt{color:var(--soft);font-size:15px}
-.rights dd{margin:0;min-width:0}
+.rights{background:var(--card);border-radius:24px;padding:28px;border:1.5px dashed var(--sky-deep);display:flex;flex-direction:column;gap:16px}
+.rights dl{margin:0;display:grid;grid-template-columns:7em 1fr;gap:12px 20px}
+.rights dt{color:var(--sky-deep);font-weight:600;font-size:14px;padding-top:2px}
+.rights dd{margin:0;min-width:0;font-size:15px;max-width:44em}
 
-/* footer */
-.end{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
-.end .big{font-family:var(--display);font-size:clamp(26px,4vw,34px);line-height:1.35}
-.links{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--display);font-size:18px;padding:10px 18px;border-radius:999px;border:2px solid var(--ink);color:var(--ink);background:var(--card)}
-.btn.primary{background:var(--cape);border-color:var(--cape);color:#fff}
-.btn:focus-visible{outline:3px solid var(--sky-deep);outline-offset:3px}
-.sign{font-size:13px;color:var(--soft);font-family:ui-monospace,Menlo,monospace}
+/* contact band */
+.end{background:var(--sky)}
+.end .in{padding-block:clamp(48px,8vw,80px);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.end .big{font-family:var(--display);font-size:clamp(28px,4.4vw,40px);line-height:1.35;color:#1F2A36}
+.end .btn{border-color:#1F2A36;color:#1F2A36}
+.end .btn.primary{color:#fff;border-color:var(--cape)}
+.end .links{display:flex;flex-direction:column;gap:10px}
+footer.foot .in{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:13px;color:var(--soft)}
 
-@media (max-width:760px){
-  .hero{grid-template-columns:1fr}
-  .hero-img{order:-1}
-  .profile{grid-template-columns:1fr 1fr}
+@media (max-width:820px){
+  .menu{display:none}
+  .nav .cta{margin-left:auto}
+  .hero .in{grid-template-columns:1fr}
+  .hero-img{order:-1;aspect-ratio:4/3}
+  .facts .in{grid-template-columns:1fr 1fr}
+  .story .in{grid-template-columns:1fr}
+  .story-img{aspect-ratio:4/3}
   .gallery{grid-template-columns:1fr 1fr}
-  .wide{grid-column:span 2}
-  .two{grid-template-columns:1fr}
+  .two .in{grid-template-columns:1fr}
   .rights dl{grid-template-columns:1fr;gap:2px}
-  .rights dd{margin-bottom:8px}
+  .rights dd{margin-bottom:12px}
+  .end .in{grid-template-columns:1fr}
+  .end .links{flex-direction:row;flex-wrap:wrap}
+}
+@media (max-width:420px){
+  body{font-size:15.5px}
+  .hero h1{font-size:60px}
+  .panel,.rights{padding:22px}
 }
 @media (prefers-reduced-motion:no-preference){
-  .hero-img img{animation:bob 4s ease-in-out infinite}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .hero-img img{animation:bob 4.5s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0) scale(1.02)}50%{transform:translateY(-6px) scale(1.02)}}
 }
 </style>
 </head>
 <body>
-<main class="wrap">
 
-  <header class="hero">
+<header class="nav">
+  <div class="in">
+    <a class="logo" href="#top"><img src="favicon.png" alt="">곰댕이</a>
+    <nav class="menu" aria-label="주요 메뉴">
+      <a href="#story">소개</a><a href="#profile">프로필</a><a href="#look">갤러리</a><a href="#collab">협업</a>
+    </nav>
+    <a class="btn primary sm cta" href="https://inabooth.io/ko/ip/INB-WHY2-GKUM" target="_blank" rel="noopener">협업 제안</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="in">
     <div class="hero-text">
       <span class="badge">부르면 달려가는 꼬마 영웅</span>
-      <h1>곰댕이<small>GOMDAENG</small></h1>
-      <p class="tag">힘든 날 제일 먼저 달려와 곁에 있어 주는 애착친구</p>
-      <p class="muted">곰 귀 머리에 빨간 망토를 두른 꼬마예요. 친구가 힘들다고 하면 빨간 세발자전거를 타고 누구보다 먼저 달려가요.</p>
-      <div class="chips" aria-label="IP 정보">
-        <span class="chip">오리지널 캐릭터</span><span class="chip">3D 입체 · 2D 일러스트</span><span class="chip">힐링 · 일상 공감</span><span class="chip">2030 · 키즈/패밀리</span>
+      <h1>곰댕이<span>GOMDAENG</span></h1>
+      <p class="tagline">힘든 날 제일 먼저 달려와<br>곁에 있어 주는 애착친구</p>
+      <p class="lead">곰 귀 머리에 빨간 망토를 두른 꼬마예요.<br>친구가 힘들다고 하면 빨간 세발자전거를 타고<br>누구보다 먼저 달려가요.</p>
+      <div class="hero-btns">
+        <a class="btn primary" href="https://inabooth.io/ko/ip/INB-WHY2-GKUM" target="_blank" rel="noopener">협업 제안하기</a>
+        <a class="btn" href="#look">곰댕이 더 보기</a>
       </div>
     </div>
     <div class="hero-img"><img src="img/hero.webp" alt="세발자전거를 타고 달리는 곰댕이" width="1100" height="1100"></div>
-  </header>
+  </div>
+</section>
 
-  <section>
-    <span class="eyebrow">STORY</span>
-    <h2>힘이 세진 않지만, 곁에 있어 주는 일은 누구보다 잘해요</h2>
-    <div class="prose">
-      <p>곰댕이는 힘으로 문제를 해결해 주는 영웅이 아니에요. 힘든 날 "지금 어디야?" 하고 물어 오고, 망토를 휘날리며 세발자전거로 달려와 옆에 앉아 주는 친구예요.</p>
-      <p>작은 망토, 큰 마음. 곰댕이가 전하는 건 거창한 해결이 아니라 "괜차나, 곰댕이 여기 이떠." 한마디예요.</p>
-    </div>
-  </section>
+<div class="facts facts-wrap" id="profile">
+  <dl class="in">
+    <div class="fact"><dt>성격</dt><dd>다정하고 씩씩해요</dd></div>
+    <div class="fact"><dt>탈것</dt><dd>빨간 세발자전거</dd></div>
+    <div class="fact"><dt>상징</dt><dd>빨간 망토와 스카프</dd></div>
+    <div class="fact"><dt>말버릇</dt><dd>"가고이떠!"</dd></div>
+  </dl>
+</div>
 
-  <section>
-    <span class="eyebrow">PROFILE</span>
-    <h2>캐릭터 프로필</h2>
-    <dl class="profile">
-      <div class="pf"><dt>성격</dt><dd>다정하고 씩씩해요</dd></div>
-      <div class="pf"><dt>탈것</dt><dd>빨간 세발자전거</dd></div>
-      <div class="pf"><dt>상징</dt><dd>빨간 망토와 스카프</dd></div>
-      <div class="pf"><dt>말버릇</dt><dd>"가고이떠!"</dd></div>
-    </dl>
-    <div class="lines" aria-label="자주 하는 말">
-      <span class="bubble main">지금 어디야? 곰방 갈게!</span>
-      <span class="bubble">망토 출동!</span>
-      <span class="bubble">토닥토닥, 오늘도 잘해쪄.</span>
-      <span class="bubble">괜차나, 곰댕이 여기 이떠.</span>
-    </div>
-  </section>
+<main>
 
-  <section>
-    <span class="eyebrow">LOOK</span>
-    <h2>어떤 장면에도 한눈에 곰댕이</h2>
-    <p class="muted prose">둥근 머리와 10시·2시 방향 곰 귀, 점 눈과 ω 입, 분홍 볼, 하늘색 옷과 빨간 망토. 작은 면적에 들어가도 실루엣만으로 알아볼 수 있게 설계했어요.</p>
-    <figure class="turn" style="margin:0">
-      <img src="img/turnaround.webp" alt="세발자전거를 탄 곰댕이의 앞, 옆, 뒤 모습" width="1376" height="768">
-      <figcaption>턴어라운드 · 앞 / 옆 / 뒤</figcaption>
-    </figure>
-    <div class="gallery">
-      <figure><img src="img/front.webp" alt="곰댕이 기본 정면 전신" loading="lazy"><figcaption>기본 정면 전신</figcaption></figure>
-      <figure><img src="img/hello.webp" alt="반가워 하며 손을 드는 곰댕이" loading="lazy"><figcaption>"반가워!"</figcaption></figure>
-      <figure><img src="img/going.webp" alt="가고 있어 하며 달려가는 곰댕이" loading="lazy"><figcaption>"가고 있어!"</figcaption></figure>
-      <figure class="wide"><img src="img/village.webp" alt="마을 길을 세발자전거로 달리는 곰댕이" loading="lazy"><figcaption>친구에게 가는 길</figcaption></figure>
-      <figure><img src="img/figure.webp" alt="원목 받침 위 피규어 형태의 곰댕이" loading="lazy"><figcaption>피규어 무드</figcaption></figure>
-      <figure><img src="img/worry.webp" alt="친구의 메시지를 보고 걱정하는 곰댕이" loading="lazy"><figcaption>친구의 메시지를 받은 날</figcaption></figure>
-      <figure><img src="img/night.webp" alt="밤에 손전등을 든 잠옷 차림 곰댕이" loading="lazy"><figcaption>밤에도 출동</figcaption></figure>
-      <figure><img src="img/pajama.webp" alt="구름 잠옷을 입은 곰댕이" loading="lazy"><figcaption>구름 잠옷 의상</figcaption></figure>
-      <figure><img src="img/twod.webp" alt="2D 일러스트 버전 곰댕이 반가워" loading="lazy"><figcaption>2D 일러스트 버전</figcaption></figure>
-      <figure class="wide"><img src="img/emoticon.webp" alt="곰댕이 이모티콘 시안 24종" loading="lazy" style="object-position:top"><figcaption>이모티콘 시안 24종</figcaption></figure>
-    </div>
-  </section>
-
-  <section class="two">
-    <div class="panel">
-      <span class="eyebrow">FOR</span>
-      <h3>이런 분들께 다가가요</h3>
-      <ul>
-        <li>힘든 하루 끝에 작은 위로가 필요한 사람</li>
-        <li>"괜찮아?" 한마디를 건네고 싶은 사람</li>
-        <li>귀엽고 다정한 캐릭터 굿즈를 좋아하는 사람</li>
-      </ul>
-    </div>
-    <div class="panel">
-      <span class="eyebrow">COLLABORATION</span>
-      <h3>함께하고 싶은 협업</h3>
-      <p class="muted">매일 손에 닿는 물건에서 "곁에 있는 친구"가 되는 협업을 찾고 있어요.</p>
-      <div class="fields">
-        <span>생활용품 · 리빙</span><span>문구 · 오피스</span><span>피규어 · 완구</span><span>교육 · 키즈</span><span>디지털 콘텐츠</span><span>팝업 · 전시</span>
+  <section class="story" id="story">
+    <div class="in">
+      <div class="story-img"><img src="img/worry.webp" alt="친구의 메시지를 보고 걱정하는 곰댕이" loading="lazy"></div>
+      <div class="story-text">
+        <span class="eyebrow">STORY</span>
+        <h2>힘이 세진 않지만,<br>곁에 있어 주는 일은 누구보다 잘해요</h2>
+        <p>곰댕이는 힘으로 문제를 해결해 주는 영웅이 아니에요. 친구에게 "지금 어디야?" 하고 물어 오고, 망토를 휘날리며 달려와 옆에 앉아 주는 친구예요.</p>
+        <p class="quote">"괜차나,<br>곰댕이 여기 이떠."</p>
+        <div class="lines" aria-label="자주 하는 말">
+          <span class="bubble main">지금 어디야? 곰방 갈게!</span>
+          <span class="bubble">망토 출동!</span>
+          <span class="bubble">토닥토닥, 오늘도 잘해쪄.</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <span class="eyebrow">RIGHTS</span>
-    <div class="rights">
-      <h3>AI 활용 및 권리 안내</h3>
-      <dl>
-        <dt>원작</dt><dd>캐릭터 디자인(머리와 귀, 얼굴 구성, 2등신 비율, 의상과 색 구성)은 원작자 조혜진이 직접 그린 손그림에서 시작했어요.</dd>
-        <dt>AI 활용</dt><dd>입체 피규어 스타일 이미지와 일부 장면은 원작 그림과 설정을 바탕으로 생성형 AI(Google Gemini)를 활용해 만들었어요. AI는 질감·조명·자세·배경 표현에 쓰였어요.</dd>
-        <dt>권리 보유</dt><dd>곰댕이 캐릭터의 권리는 원작자 조혜진(조스트랫 대표)에게 있으며, 한국저작권위원회 저작권 등록을 진행하고 있어요.</dd>
-        <dt>활용 범위</dt><dd>굿즈·콜라보·라이선스 등 상업적 활용은 사전 협의와 계약으로 범위를 정해요.</dd>
-      </dl>
+  <section id="look">
+    <div class="in">
+      <div class="sec-head">
+        <span class="eyebrow">LOOK</span>
+        <h2>어떤 장면에서도 한눈에 곰댕이</h2>
+        <p class="lead">둥근 머리와 곰 귀, 점 눈과 ω 입, 분홍 볼, 하늘색 옷과 빨간 망토. 작은 면적에서도 실루엣만으로 알아볼 수 있어요.</p>
+      </div>
+      <figure class="turn">
+        <img src="img/turnaround.webp" alt="세발자전거를 탄 곰댕이의 앞, 옆, 뒤 모습" width="1376" height="768" loading="lazy">
+        <figcaption>턴어라운드 · 앞 / 옆 / 뒤</figcaption>
+      </figure>
+      <div class="gallery">
+        <figure><img src="img/front.webp" alt="곰댕이 기본 정면 전신" loading="lazy"><figcaption>기본 정면 전신</figcaption></figure>
+        <figure><img src="img/hello.webp" alt="반가워 하며 손을 드는 곰댕이" loading="lazy"><figcaption>"반가워!"</figcaption></figure>
+        <figure class="wide"><img src="img/village.webp" alt="마을 길을 세발자전거로 달리는 곰댕이" loading="lazy"><figcaption>친구에게 가는 길</figcaption></figure>
+        <figure><img src="img/going.webp" alt="가고 있어 하며 달려가는 곰댕이" loading="lazy"><figcaption>"가고 있어!"</figcaption></figure>
+        <figure><img src="img/figure.webp" alt="원목 받침 위 피규어 형태의 곰댕이" loading="lazy"><figcaption>피규어 무드</figcaption></figure>
+        <figure><img src="img/night.webp" alt="밤에 손전등을 든 잠옷 차림 곰댕이" loading="lazy"><figcaption>밤에도 출동</figcaption></figure>
+        <figure><img src="img/pajama.webp" alt="구름 잠옷을 입은 곰댕이" loading="lazy"><figcaption>구름 잠옷 의상</figcaption></figure>
+        <figure><img src="img/twod.webp" alt="2D 일러스트 버전 곰댕이 반가워" loading="lazy"><figcaption>2D 일러스트 버전</figcaption></figure>
+        <figure class="wide"><img src="img/emoticon.webp" alt="곰댕이 이모티콘 시안 24종" loading="lazy" style="object-position:top"><figcaption>이모티콘 시안 24종</figcaption></figure>
+        <figure><img src="img/ride.webp" alt="세발자전거로 달려오는 곰댕이 정면" loading="lazy"><figcaption>곰방 갈게!</figcaption></figure>
+      </div>
     </div>
   </section>
 
-  <footer class="end">
+  <section class="two" id="collab">
+    <div class="in">
+      <div class="panel">
+        <span class="eyebrow">FOR</span>
+        <h3>이런 분들께 다가가요</h3>
+        <ul>
+          <li>힘든 하루 끝에 작은 위로가 필요한 사람</li>
+          <li>"괜찮아?" 한마디를 건네고 싶은 사람</li>
+          <li>귀엽고 다정한 캐릭터 굿즈를 좋아하는 사람</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="eyebrow">COLLABORATION</span>
+        <h3>함께하고 싶은 협업</h3>
+        <p class="lead" style="font-size:15px">매일 손에 닿는 물건에서 "곁에 있는 친구"가 되는 협업을 찾고 있어요.</p>
+        <div class="fields">
+          <span>생활용품 · 리빙</span><span>문구 · 오피스</span><span>피규어 · 완구</span><span>교육 · 키즈</span><span>디지털 콘텐츠</span><span>팝업 · 전시</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rights">
+    <div class="in">
+      <div class="rights">
+        <span class="eyebrow">RIGHTS</span>
+        <h3>AI 활용 및 권리 안내</h3>
+        <dl>
+          <dt>원작</dt><dd>캐릭터 디자인(머리와 귀, 얼굴 구성, 2등신 비율, 의상과 색 구성)은 원작자 조혜진이 직접 그린 손그림에서 시작했어요.</dd>
+          <dt>AI 활용</dt><dd>입체 피규어 스타일 이미지와 일부 장면은 원작 그림과 설정을 바탕으로 생성형 AI(Google Gemini)를 활용해 만들었어요. AI는 질감·조명·자세·배경 표현에 쓰였어요.</dd>
+          <dt>권리 보유</dt><dd>곰댕이 캐릭터의 권리는 원작자 조혜진(조스트랫 대표)에게 있으며, 한국저작권위원회 저작권 등록을 진행하고 있어요.</dd>
+          <dt>활용 범위</dt><dd>굿즈·콜라보·라이선스 등 상업적 활용은 사전 협의와 계약으로 범위를 정해요.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="end">
+  <div class="in">
     <p class="big">힘든 날엔 불러 주세요.<br>세발자전거 타고 가고이떠!</p>
     <div class="links">
       <a class="btn primary" href="https://inabooth.io/ko/ip/INB-WHY2-GKUM" target="_blank" rel="noopener">이너부스에서 협업 제안하기</a>
       <a class="btn" href="https://www.instagram.com/gomdaeng_official/" target="_blank" rel="noopener">인스타그램 @gomdaeng_official</a>
     </div>
-    <p class="sign">© 곰댕이 Gomdaeng · made by Jostrat</p>
-  </footer>
+  </div>
+</section>
 
-</main>
+<footer class="foot">
+  <div class="in">
+    <span>© 2026 곰댕이 Gomdaeng · 조스트랫(Jostrat)</span>
+    <span>All characters and artwork belong to their creator.</span>
+  </div>
+</footer>
+
 </body>
 </html>
