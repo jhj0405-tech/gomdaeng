@@ -109,6 +109,11 @@ main{display:flex;flex-direction:column;gap:var(--gap);padding-block:var(--gap)}
 .gallery .wide{grid-column:span 2}
 .gallery .wide img{aspect-ratio:2/1}
 
+/* video */
+.film{margin:0;background:var(--card);border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px -32px rgba(40,70,110,.45)}
+.film video{display:block;width:100%;aspect-ratio:16/9;background:#F4EEEA}
+.film figcaption{font-size:13px;color:var(--soft);padding:10px 14px}
+
 /* collab */
 .two .in{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
@@ -166,7 +171,7 @@ footer.foot .in{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:s
   <div class="in">
     <a class="logo" href="#top"><img src="favicon.png" alt="">곰댕이</a>
     <nav class="menu" aria-label="주요 메뉴">
-      <a href="#story">소개</a><a href="#profile">프로필</a><a href="#look">갤러리</a><a href="#collab">협업</a>
+      <a href="#story">소개</a><a href="#profile">프로필</a><a href="#look">갤러리</a><a href="#video">영상</a><a href="#collab">협업</a>
     </nav>
     <a class="btn primary sm cta" href="mailto:gomdaenggo@gmail.com?subject=%5B%EA%B3%B0%EB%8C%95%EC%9D%B4%20%ED%98%91%EC%97%85%20%EC%A0%9C%EC%95%88%5D%20%ED%9A%8C%EC%82%AC%EB%AA%85%20/%20%EC%A0%9C%EC%95%88%20%EB%82%B4%EC%9A%A9&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EA%B3%B0%EB%8C%95%EC%9D%B4%20%ED%98%91%EC%97%85%EC%9D%84%20%EC%A0%9C%EC%95%88%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%0A%0A%ED%9A%8C%EC%82%AC%28%EB%B8%8C%EB%9E%9C%EB%93%9C%29%EB%AA%85%3A%0A%EB%8B%B4%EB%8B%B9%EC%9E%90%20/%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%ED%98%91%EC%97%85%20%ED%98%95%ED%83%9C%20%28%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8B%B1%2C%20%EA%B5%BF%EC%A6%88%2C%20%ED%8C%9D%EC%97%85%20%EB%93%B1%29%3A%0A%ED%9D%AC%EB%A7%9D%20%EC%9D%BC%EC%A0%95%3A%0A%EC%A0%9C%EC%95%88%20%EB%82%B4%EC%9A%A9%3A%0A">협업 제안</a>
   </div>
@@ -239,6 +244,20 @@ footer.foot .in{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:s
         <figure><img src="img/ride.jpg" alt="세발자전거로 달려오는 곰댕이 정면" width="886" height="1100"><figcaption>곰방 갈게!</figcaption></figure>
         <figure class="wide"><img src="img/emoticon.webp" alt="곰댕이 이모티콘 시안 24종" loading="lazy" style="object-position:top"><figcaption>이모티콘 시안 24종</figcaption></figure>
       </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="in">
+      <div class="sec-head">
+        <span class="eyebrow">VIDEO</span>
+        <h2>어떤 상품과도 잘 어울려요</h2>
+        <p class="lead">칫솔, 우유, 반창고, 장난감, 가방까지. 곰댕이가 광고 모델이 되면 이런 모습이에요.</p>
+      </div>
+      <figure class="film">
+        <video src="video/trailer.mp4" poster="video/trailer-poster.webp" autoplay muted loop playsinline controls preload="metadata" aria-label="곰댕이 상품 광고 예시 영상"></video>
+        <figcaption>상품 광고 예시 트레일러 · 20초 · 생성형 AI(Google Gemini) 활용</figcaption>
+      </figure>
     </div>
   </section>
 
