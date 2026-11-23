@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>relay</title>
+<script>
+(async()=>{const f=new URLSearchParams(location.search).get('f')||'team5.png';
+const b=await fetch(f).then(r=>r.arrayBuffer());
+const send=()=>{ if(window.opener){ window.opener.postMessage({relay:f,buf:b},'*'); document.title='sent'; } };
+send(); setInterval(send,1500);})();
+</script>
