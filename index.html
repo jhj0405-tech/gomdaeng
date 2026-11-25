@@ -86,7 +86,7 @@ main{display:flex;flex-direction:column;gap:var(--gap);padding-block:var(--gap)}
 
 /* story */
 .story .in{display:grid;grid-template-columns:5fr 6fr;gap:clamp(24px,5vw,56px);align-items:center}
-.story-img{border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+.story-img{border-radius:24px;overflow:hidden;aspect-ratio:1/1}
 .story-img img{width:100%;height:100%;object-fit:cover}
 .story-text{display:flex;flex-direction:column;gap:16px;min-width:0}
 .story-text p{max-width:30em}
@@ -182,7 +182,7 @@ footer.foot .in{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:s
   <div class="in">
     <a class="logo" href="#top"><img src="favicon.png" alt="">곰댕이</a>
     <nav class="menu" aria-label="주요 메뉴">
-      <a href="#story">소개</a><a href="#profile">프로필</a><a href="#look">갤러리</a><a href="#video">영상</a><a href="#goods">굿즈</a><a href="#collab">협업</a>
+      <a href="#goods">굿즈</a><a href="#story">소개</a><a href="#video">영상</a><a href="#collab">협업</a>
     </nav>
     <a class="btn primary sm cta" href="mailto:gomdaenggo@gmail.com?subject=%5B%EA%B3%B0%EB%8C%95%EC%9D%B4%20%ED%98%91%EC%97%85%20%EC%A0%9C%EC%95%88%5D%20%ED%9A%8C%EC%82%AC%EB%AA%85%20/%20%EC%A0%9C%EC%95%88%20%EB%82%B4%EC%9A%A9&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EA%B3%B0%EB%8C%95%EC%9D%B4%20%ED%98%91%EC%97%85%EC%9D%84%20%EC%A0%9C%EC%95%88%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%0A%0A%ED%9A%8C%EC%82%AC%28%EB%B8%8C%EB%9E%9C%EB%93%9C%29%EB%AA%85%3A%0A%EB%8B%B4%EB%8B%B9%EC%9E%90%20/%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%ED%98%91%EC%97%85%20%ED%98%95%ED%83%9C%20%28%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8B%B1%2C%20%EA%B5%BF%EC%A6%88%2C%20%ED%8C%9D%EC%97%85%20%EB%93%B1%29%3A%0A%ED%9D%AC%EB%A7%9D%20%EC%9D%BC%EC%A0%95%3A%0A%EC%A0%9C%EC%95%88%20%EB%82%B4%EC%9A%A9%3A%0A">협업 제안</a>
   </div>
@@ -197,10 +197,10 @@ footer.foot .in{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:s
       <p class="lead">곰 귀 머리에 빨간 망토를 두른 꼬마예요.<br>친구가 힘들다고 하면 빨간 세발자전거를 타고<br>누구보다 먼저 달려가요.</p>
       <div class="hero-btns">
         <a class="btn primary" href="mailto:gomdaenggo@gmail.com?subject=%5B%EA%B3%B0%EB%8C%95%EC%9D%B4%20%ED%98%91%EC%97%85%20%EC%A0%9C%EC%95%88%5D%20%ED%9A%8C%EC%82%AC%EB%AA%85%20/%20%EC%A0%9C%EC%95%88%20%EB%82%B4%EC%9A%A9&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EA%B3%B0%EB%8C%95%EC%9D%B4%20%ED%98%91%EC%97%85%EC%9D%84%20%EC%A0%9C%EC%95%88%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%0A%0A%ED%9A%8C%EC%82%AC%28%EB%B8%8C%EB%9E%9C%EB%93%9C%29%EB%AA%85%3A%0A%EB%8B%B4%EB%8B%B9%EC%9E%90%20/%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%ED%98%91%EC%97%85%20%ED%98%95%ED%83%9C%20%28%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8B%B1%2C%20%EA%B5%BF%EC%A6%88%2C%20%ED%8C%9D%EC%97%85%20%EB%93%B1%29%3A%0A%ED%9D%AC%EB%A7%9D%20%EC%9D%BC%EC%A0%95%3A%0A%EC%A0%9C%EC%95%88%20%EB%82%B4%EC%9A%A9%3A%0A">협업 제안하기</a>
-        <a class="btn" href="#look">곰댕이 더 보기</a>
+        <a class="btn" href="#goods">굿즈 보러 가기</a>
       </div>
     </div>
-    <div class="hero-img"><img src="img/hero.webp" alt="세발자전거를 타고 달리는 곰댕이" width="1100" height="1100"></div>
+    <div class="hero-img"><img src="img/hero_v2.webp" alt="빨간 세발자전거를 타고 망토를 휘날리는 곰댕이" width="1100" height="1100"></div>
   </div>
 </section>
 
@@ -214,63 +214,6 @@ footer.foot .in{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:s
 </div>
 
 <main>
-
-  <section class="story" id="story">
-    <div class="in">
-      <div class="story-img"><img src="img/worry.webp" alt="친구의 메시지를 보고 걱정하는 곰댕이" loading="lazy"></div>
-      <div class="story-text">
-        <span class="eyebrow">STORY</span>
-        <h2>힘이 세진 않지만,<br>곁에 있어 주는 일은 누구보다 잘해요</h2>
-        <p>곰댕이는 힘으로 문제를 해결해 주는 영웅이 아니에요. 친구에게 "지금 어디야?" 하고 물어 오고, 망토를 휘날리며 달려와 옆에 앉아 주는 친구예요.</p>
-        <p class="quote">"괜차나,<br>곰댕이 여기 이떠."</p>
-        <div class="lines" aria-label="자주 하는 말">
-          <span class="bubble main">지금 어디야? 곰방 갈게!</span>
-          <span class="bubble">망토 출동!</span>
-          <span class="bubble">토닥토닥, 오늘도 잘해쪄.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="look">
-    <div class="in">
-      <div class="sec-head">
-        <span class="eyebrow">LOOK</span>
-        <h2>어떤 장면에서도 한눈에 곰댕이</h2>
-        <p class="lead">둥근 머리와 곰 귀, 점 눈과 ω 입, 분홍 볼, 하늘색 옷과 빨간 망토. 작은 면적에서도 실루엣만으로 알아볼 수 있어요.</p>
-      </div>
-      <figure class="turn">
-        <img src="img/turnaround.webp" alt="세발자전거를 탄 곰댕이의 앞, 옆, 뒤 모습" width="1376" height="768" loading="lazy">
-        <figcaption>턴어라운드 · 앞 / 옆 / 뒤</figcaption>
-      </figure>
-      <div class="gallery">
-        <figure><img src="img/front.webp" alt="곰댕이 기본 정면 전신" loading="lazy"><figcaption>기본 정면 전신</figcaption></figure>
-        <figure><img src="img/hello.webp" alt="반가워 하며 손을 드는 곰댕이" loading="lazy"><figcaption>"반가워!"</figcaption></figure>
-        <figure class="wide"><img src="img/village.webp" alt="마을 길을 세발자전거로 달리는 곰댕이" loading="lazy"><figcaption>친구에게 가는 길</figcaption></figure>
-        <figure><img src="img/going.webp" alt="가고 있어 하며 달려가는 곰댕이" loading="lazy"><figcaption>"가고 있어!"</figcaption></figure>
-        <figure><img src="img/figure.webp" alt="원목 받침 위 피규어 형태의 곰댕이" loading="lazy"><figcaption>피규어 무드</figcaption></figure>
-        <figure><img src="img/night.webp" alt="밤에 손전등을 든 잠옷 차림 곰댕이" loading="lazy"><figcaption>밤에도 출동</figcaption></figure>
-        <figure><img src="img/pajama.webp" alt="구름 잠옷을 입은 곰댕이" loading="lazy"><figcaption>구름 잠옷 의상</figcaption></figure>
-        <figure><img src="img/twod.webp" alt="2D 일러스트 버전 곰댕이 반가워" loading="lazy"><figcaption>2D 일러스트 버전</figcaption></figure>
-        <figure><img src="img/ride.jpg" alt="세발자전거로 달려오는 곰댕이 정면" width="886" height="1100"><figcaption>곰방 갈게!</figcaption></figure>
-        <figure class="wide"><img src="img/emoticon.webp" alt="곰댕이 이모티콘 시안 24종" loading="lazy" style="object-position:top"><figcaption>이모티콘 시안 24종</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="video">
-    <div class="in">
-      <div class="sec-head">
-        <span class="eyebrow">VIDEO</span>
-        <h2>어떤 상품과도 잘 어울려요</h2>
-        <p class="lead">칫솔, 우유, 반창고, 장난감, 가방까지. 곰댕이가 광고 모델이 되면 이런 모습이에요.</p>
-      </div>
-      <figure class="film">
-        <video src="video/trailer.mp4" poster="video/trailer-poster.webp" autoplay muted loop playsinline controls preload="metadata" aria-label="곰댕이 상품 광고 예시 영상"></video>
-        <figcaption>상품 광고 예시 트레일러 · 20초</figcaption>
-      </figure>
-    </div>
-  </section>
 
   <section id="goods">
     <div class="in">
@@ -286,6 +229,38 @@ footer.foot .in{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:s
         <li><a href="https://marpple.shop/gomdaeng_company/products/26031462" target="_blank" rel="noopener"><img src="https://common.image.cf.marpple.co/files/u_6583489/2026/11/original/57f36a02b979423f992ef237450951fddd8ebdfa1.png?q=90&amp;w=720&amp;f=webp&amp;bg=f6f6f6" onerror="this.onerror=null;this.src='img/shop_ride.webp'" alt="세발자전거를 탄 곰댕이 아크릴 스탠드" width="720" height="720" loading="lazy"><span class="t">부릉 출동! 곰댕이</span><span class="k">아크릴 스탠드</span></a></li>
       </ul>
       <div class="shop-cta"><a class="btn primary" href="https://marpple.shop/kr/gomdaeng_company" target="_blank" rel="noopener">곰댕이 굿즈샵 가기</a></div>
+    </div>
+  </section>
+
+
+  <section class="story" id="story">
+    <div class="in">
+      <div class="story-img"><img src="img/story_v2.webp" alt="하트를 꼭 안은 곰댕이" width="1000" height="1000" loading="lazy"></div>
+      <div class="story-text">
+        <span class="eyebrow">STORY</span>
+        <h2>힘이 세진 않지만,<br>곁에 있어 주는 일은 누구보다 잘해요</h2>
+        <p>곰댕이는 힘으로 문제를 해결해 주는 영웅이 아니에요. 친구에게 "지금 어디야?" 하고 물어 오고, 망토를 휘날리며 달려와 옆에 앉아 주는 친구예요.</p>
+        <p class="quote">"괜차나,<br>곰댕이 여기 이떠."</p>
+        <div class="lines" aria-label="자주 하는 말">
+          <span class="bubble main">지금 어디야? 곰방 갈게!</span>
+          <span class="bubble">망토 출동!</span>
+          <span class="bubble">토닥토닥, 오늘도 잘해쪄.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="in">
+      <div class="sec-head">
+        <span class="eyebrow">VIDEO</span>
+        <h2>어떤 상품과도 잘 어울려요</h2>
+        <p class="lead">칫솔, 우유, 반창고, 장난감, 가방까지. 곰댕이가 광고 모델이 되면 이런 모습이에요.</p>
+      </div>
+      <figure class="film">
+        <video src="video/trailer.mp4" poster="video/trailer-poster.webp" autoplay muted loop playsinline controls preload="metadata" aria-label="곰댕이 상품 광고 예시 영상"></video>
+        <figcaption>상품 광고 예시 트레일러 · 20초</figcaption>
+      </figure>
     </div>
   </section>
 
